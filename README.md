@@ -1,59 +1,213 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌱 NexoEco
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Web E-Commerce Platform for Micro-Entrepreneurship Management**
 
-## About Laravel
+NexoEco is a Full Stack web application designed to empower micro-entrepreneurs by providing a simple, scalable, and secure e-commerce platform. The system allows users to manage products, categories, inventory, and orders while offering customers an intuitive online shopping experience.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+NexoEco is built using a **three-tier architecture**:
 
-## Learning Laravel
+* **Frontend:** Blade templates (Laravel) with responsive design
+* **Backend:** Laravel Framework
+* **Authentication:** Laravel Breeze
+* **Database:** MySQL (Relational Database)
+* **Architecture Style:** Client–Server with RESTful API
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+The platform supports role-based access control and follows best practices in security, performance, and usability.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 👥 User Roles
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔹 Administrator
 
-### Premium Partners
+* Full system management
+* CRUD operations for products and categories
+* Order status management
+* Sales reports access
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🔹 Client
 
-## Contributing
+* User registration and login
+* Browse products
+* Add products to cart
+* Place orders
+* View order history
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🔹 Visitor
 
-## Code of Conduct
+* Public product browsing
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🚀 Functional Requirements Implemented
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| ID    | Description                               |
+| ----- | ----------------------------------------- |
+| RF-01 | User registration                         |
+| RF-02 | Secure authentication                     |
+| RF-03 | Role-based access control                 |
+| RF-04 | CRUD operations for products              |
+| RF-05 | CRUD operations for categories            |
+| RF-06 | Shopping cart management                  |
+| RF-07 | Inventory availability validation         |
+| RF-08 | Order generation with product details     |
+| RF-09 | Automatic inventory update after purchase |
+| RF-10 | Order status management by admin          |
+| RF-11 | Basic sales reports                       |
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🔐 Non-Functional Requirements
+
+### Security
+
+* Password encryption (Laravel hashing)
+* Authentication using Laravel Breeze
+* Role-based authorization
+* Input validation (Frontend & Backend)
+* SQL Injection protection via Eloquent ORM
+
+### Performance
+
+* API response time under 2 seconds (normal load)
+* Pagination for large datasets
+
+### Usability
+
+* Responsive web interface
+* Mobile compatibility
+* Intuitive checkout flow
+
+---
+
+## 🗄️ Database Model (Core Entities)
+
+* **Users**
+* **Categories**
+* **Products**
+* **Orders**
+* **Order_Details**
+
+### Relationships
+
+* User → (1:N) → Orders
+* Order → (1:N) → Order_Details
+* Category → (1:N) → Products
+
+---
+
+## 🔌 API Documentation
+
+The system exposes a RESTful API documented using:
+
+* Postman Collection
+  or
+* Swagger (if implemented)
+
+### Main Endpoints
+
+* Authentication
+* Product Management
+* Category Management
+* Order Management
+* Reports
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend:** Laravel
+* **Authentication:** Laravel Breeze
+* **Database:** MySQL
+* **ORM:** Eloquent
+* **Architecture:** MVC + REST API
+
+---
+
+## ⚙️ Installation Guide
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/nexoeco.git
+cd nexoeco
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+composer install
+npm install && npm run dev
+```
+
+### 3️⃣ Configure environment
+
+Copy `.env.example` to `.env` and configure database credentials:
+
+```bash
+cp .env.example .env
+```
+
+Update:
+
+```
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+### 4️⃣ Generate application key
+
+```bash
+php artisan key:generate
+```
+
+### 5️⃣ Run migrations
+
+```bash
+php artisan migrate
+```
+
+### 6️⃣ Start development server
+
+```bash
+php artisan serve
+```
+
+---
+
+## 🧪 Testing & Validation
+
+The system includes functional testing for:
+
+* CRUD operations
+* Authentication & role validation
+* Inventory validation
+* Order processing
+
+Testing evidence is documented using Postman requests and screenshots.
+
+---
+
+## 📊 Future Improvements
+
+* Payment gateway integration
+* Logistics API integration
+* Advanced analytics dashboard
+* Multi-vendor support
+* Product image optimization
+
+---
+
+## 📄 License
+
+This project is developed for academic and educational purposes.
+
+---
+---
+
+> NexoEco — Connecting micro-entrepreneurs to the digital economy.
